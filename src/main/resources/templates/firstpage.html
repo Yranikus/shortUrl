@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>shorter</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div class="main">
+        <th:block sec:authorize="!isAuthenticated()">
+        <div class="forma">
+            <form th:method="POST" th:action="@{/login}">
+                <div class="error" th:if="${param.error}">Неверные данные</div>
+                <div class="text">Логин</div>
+                <input type="text" class="vvod" name="login">
+                <div class="text">Пароль</div>
+                <input type="password" class="vvod" name="password">
+                <input type="submit" class="baton" value="войти">
+            </form>
+        </div>
+        <div class="forma">
+            <form th:method="POST" th:action="@{/registration}">
+                <div class="error" th:if="${error2} != null" th:text="${error2}">Логин занят</div>
+                <div class="text">Логин</div>
+                <input type="text" class="vvod" name="login">
+                <div class="text">Пароль</div>
+                <input type="password" class="vvod" name="password">
+                <input type="submit" class="baton" value="Зарегистрироваться">
+            </form>
+        </div>
+        </th:block>
+        <div class="urlholder">
+            <form th:method="POST" th:action="@{/}">
+                <div class="boxick">
+                    <div>Введите ссылку</div>
+                    <input type="text" name="url" class="vvodurl">
+                </div>
+                <div class="boxick">
+                    <div>Время жизни</div>
+                    <input type="text" name="time" class="vvodtime" placeholder="опционально">
+                </div>
+                <div class="kek">
+                    <input type="submit" value="сгенерировать" class="pukich">
+                </div>
+            </form>
+            <div class="generatedURL">
+                <div class="error" th:if="${shorturl} != null" th:text="${shorturl}">Вы ввели не валидную сылку!</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

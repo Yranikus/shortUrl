@@ -1,0 +1,92 @@
+.main{
+
+margin: 200px auto;
+width: 750px;
+height: 520px;
+background: #FFFFFF;
+border-radius: 36px;
+}
+
+.forma {
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.vvod{
+    display: block;
+    width: 325px;
+    border: none;
+    background-color: rgb(190, 190, 190);
+    border-radius: 2px;
+    line-height: 20px;
+    color: white;
+}
+
+.baton {
+    display: block;
+    background-color: greenyellow;
+    border: none;
+    font-size: 20px;
+    margin: 10px auto ;
+}
+
+.baton:hover {
+
+    background-color: rgb(28, 187, 28);
+    
+}
+
+
+body {
+    background-color: #d1d1d1;
+}
+
+.boxick {
+    margin-top: 20px;
+    margin-left: 15px;
+    float: left;
+}
+
+
+.vvodurl{
+    background-color: #C4C4C4;
+    width: 400px;
+    display: block;
+    border: none;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.vvodtime {
+    background-color: #C4C4C4;
+    width: 110px;
+    display: block;
+    border: none;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.pukich {
+    display: inline-block;
+    background-color: greenyellow;
+    border: none;
+    font-size: 20px;
+    margin-top: 40px;
+    height: 30px;
+}
+
+.kek {
+    text-align: center;
+}
+
+.generatedURL {
+    margin: 50px auto;
+    width: 500px;
+    background-color: thistle;
+    height: 50px;
+}
+
+.error{
+    color: red;
+}
