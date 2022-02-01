@@ -36,7 +36,7 @@ public class MainController {
                 model.addAttribute("shorturl", "Введена не действительная ссылка");
                 return "firstpage";
             }
-            model.addAttribute("shorturl", "http://localhost:8081/1/" + urlService.saveAndGenerate(url, time));
+            model.addAttribute("shorturl",  urlService.saveAndGenerate(url, time));
             return "firstpage";
         }
         return "firstpage";
