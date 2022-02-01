@@ -28,6 +28,9 @@ public class RedirectController {
     public RedirectView redirect(@PathVariable(required = true) String shorturl,
                                  Authentication authentication) {
         String longurl = urlService.updateStatistic(shorturl,authentication);
+        if (longurl == null){
+            return new RedirectView("https://url4566.herokuapp.com");
+        }
         return new RedirectView(longurl);
     }
 
