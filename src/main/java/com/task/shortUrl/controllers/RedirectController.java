@@ -28,10 +28,7 @@ public class RedirectController {
     public RedirectView redirect(@PathVariable(required = true) String shorturl,
                                  Authentication authentication) {
         String longurl = urlService.updateStatistic(shorturl,authentication);
-        if (longurl != null) {
-            return new RedirectView(longurl);
-        }
-        return new RedirectView("fgujfg");
+        return new RedirectView(longurl);
     }
 
 

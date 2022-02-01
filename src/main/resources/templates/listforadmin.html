@@ -30,7 +30,7 @@
   <tr th:each = "url :${urlmodels}">
     <td class="first"  th:text="${url.lonUrl}"></td>
     <!--http://localhost:8081/1/-->
-    <td th:text="'https://url4566.herokuapp.com/' + ${url.getShorUrl()}">ghjghcj</td>
+    <td th:text="'https://url4566.herokuapp.com/1/' + ${url.getShorUrl()}">ghjghcj</td>
     <td class="visits"  th:text="${url.getCounter()}">ghjgjhgjhgj</td>
     <td class="link red"><a th:href="'/del/' + ${url.getId()}">Удалить ссылку</a></td>
     <td class="link blue"><a th:href="'/statistics/' + ${url.getId()}">Подробная статистика</a></td>

@@ -46,7 +46,7 @@
                 </div>
             </form>
             <div class="generatedURL">
-                <div class="error" th:if="${shorturl} != null" th:text="'https://url4566.herokuapp.com/' + ${shorturl}">Вы ввели не валидную сылку!</div>
+                <div class="error" th:if="${shorturl} != null" th:text="'https://url4566.herokuapp.com/1/' + ${shorturl}">Вы ввели не валидную сылку!</div>
             </div>
         </div>
         <th:block sec:authorize="isAuthenticated()">
