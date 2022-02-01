@@ -1,0 +1,75 @@
+
+
+
+body {
+    background-color: #d1d1d1;
+}
+
+table{
+    width: 1500px;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    height: 30px;
+    padding: 5px;
+}
+
+
+.first{
+    width: 500px;
+}
+
+.visits {
+    width: 200px;
+    text-align: center;
+}
+
+
+.button{
+    width: 140px;
+    margin: 0 auto;
+    background-color: rgb(196, 190, 188);
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.button:hover{
+    background-color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid blue;
+    width: 50px;
+    padding: 0 5px;
+    margin: 10px auto;
+}
+
+.link{
+    text-align: center;
+    width: 150px;
+}
+
+.red {
+    font-size: 20px;
+    background-color: tomato;
+}
+
+.blue {
+    background-color: rgb(72, 145, 240);
+}

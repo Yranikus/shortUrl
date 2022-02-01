@@ -38,7 +38,7 @@
                     <input type="text" name="url" class="vvodurl">
                 </div>
                 <div class="boxick">
-                    <div>Время жизни</div>
+                    <div>Время жизни (мин)</div>
                     <input type="text" name="time" class="vvodtime" placeholder="опционально">
                 </div>
                 <div class="kek">
@@ -49,6 +49,16 @@
                 <div class="error" th:if="${shorturl} != null" th:text="${shorturl}">Вы ввели не валидную сылку!</div>
             </div>
         </div>
+        <th:block sec:authorize="isAuthenticated()">
+        <div class="button">
+            <a href="allurl">Список всех ссылок</a>
+        </div>
+        <div class="logout">
+            <form th:method="POST" th:action="@{/logout}">
+                <input type="submit" value="Выйти">
+            </form>
+        </div>
+        </th:block>
     </div>
 </body>
 </html>

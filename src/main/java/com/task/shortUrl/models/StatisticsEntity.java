@@ -5,15 +5,17 @@ import java.util.Date;
 public class StatisticsEntity {
 
     private int id;
-    private String browser;
+    private String username;
     private Date date;
     private int linkId;
 
-
-    public StatisticsEntity(String browser, Date date, int linkId) {
-        this.browser = browser;
+    public StatisticsEntity( String username, Date date, int linkId) {
+        this.username = username;
         this.date = date;
         this.linkId = linkId;
+    }
+
+    public StatisticsEntity() {
     }
 
     public int getId() {
@@ -24,12 +26,12 @@ public class StatisticsEntity {
         this.id = id;
     }
 
-    public String getBrowser() {
-        return browser;
+    public String getUsername() {
+        return username;
     }
 
-    public void setBrowser(String browser) {
-        this.browser = browser;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Date getDate() {

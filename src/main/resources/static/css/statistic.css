@@ -1,0 +1,49 @@
+
+.center{
+    width: 200px;
+    margin: 10px auto;
+}
+
+body {
+    background-color: #d1d1d1;
+}
+
+
+
+table{
+    width: 1800px;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    height: 30px;
+    padding: 5px;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid blue;
+    width: 50px;
+    padding: 0 5px;
+    margin: 10px auto;
+}
+
+.link{
+    text-align: center;
+    width: 150px;
+}

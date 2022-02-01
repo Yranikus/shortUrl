@@ -3,14 +3,12 @@ package com.task.shortUrl.models;
 public class UrlModel {
 
     private int id;
-    private Long time;
     private int counter;
     private String lonUrl;
     private String shorUrl;
 
 
-    public UrlModel( Long time, String lonUrl, String shorUrl) {
-        this.time = time;
+    public UrlModel( String lonUrl, String shorUrl) {
         this.counter = 0;
         this.lonUrl = lonUrl;
         this.shorUrl = shorUrl;
@@ -40,13 +38,7 @@ public class UrlModel {
         this.id = id;
     }
 
-    public Long getTime() {
-        return time;
-    }
 
-    public void setTime(Long time) {
-        this.time = time;
-    }
 
     public String getLonUrl() {
         return lonUrl;

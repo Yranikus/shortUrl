@@ -16,7 +16,6 @@ public class UrlRowMapper implements RowMapper<UrlModel> {
         url.setLonUrl(rs.getString("longurl"));
         url.setShorUrl(rs.getString("shorturl"));
         url.setCounter(rs.getInt("counter"));
-        url.setTime(rs.getLong("time"));
         return url;
     }
 }

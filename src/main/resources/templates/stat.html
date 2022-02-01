@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>shorter</title>
+    <link rel="stylesheet" href="/css/statistic.css" type="text/css">
+</head>
+<body>
+    <div class="menu">
+        <a href="/">Назад</a>
+    </div>
+    <div class="center" th:text="'Исходная ссылка: ' + ${url.lonUrl}">Исходная ссылка: </div>
+    <table>
+        <tr>
+            <th>
+                Заходивший пользователь
+            </th>
+            <th>
+                Время перехода
+            </th>
+        </tr>
+        <tr th:each = "stat :${statics}">
+            <td th:text="${stat.getUsername()}">пчочаор</td>
+            <td th:text="${stat.getDate()}">ghjghcj</td>
+        </tr>
+    </table>
+</body>
+</html>

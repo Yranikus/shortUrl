@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>shorter</title>
+  <link rel="stylesheet" href="css/styleforlist.css" type="text/css">
+</head>
+<body>
+<div class="menu">
+  <a href="/">Назад</a>
+</div>
+<table>
+  <tr>
+    <th>
+      Исходная ссылка
+    </th>
+    <th>
+      Укороченная ссылка
+    </th>
+    <th>
+      Колличесво переходов
+    </th>
+  </tr>
+  <tr th:each = "url :${urlmodels}">
+    <td class="first"  th:text="${url.getLonUrl()}"></td>
+    <td th:text="${url.getShorUrl()}">ghjghcj</td>
+    <td class="visits"  th:text="${url.getCounter()}">ghjgjhgjhgj</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -2,7 +2,6 @@
 
 margin: 200px auto;
 width: 750px;
-height: 520px;
 background: #FFFFFF;
 border-radius: 36px;
 }
@@ -89,4 +88,29 @@ body {
 
 .error{
     color: red;
+}
+
+.logout {
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.button{
+    width: 140px;
+    margin: 0 auto;
+    background-color: rgb(196, 190, 188);
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.button:hover{
+    background-color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

@@ -15,14 +15,20 @@ public class UrlDAO {
     private JdbcTemplate jdbcTemplate;
 
 
+    public void deleteUrl(int id){
+        jdbcTemplate.update("DELETE FROM URL WHERE id=?", id);
+    }
+
+    public UrlModel findById(int id){
+        return jdbcTemplate.query("SELECT * FROM URL WHERE id=?", new Object[]{id}, new UrlRowMapper()).stream().findAny().orElse(null);
+    }
 
     public List<UrlModel> findAll() {
         return jdbcTemplate.query("SELECT * FROM URL", new UrlRowMapper());
     }
 
     public void save(UrlModel urlModel){
-        jdbcTemplate.update("INSERT INTO URL(time, counter, longurl, shorturl) VALUES( ?, ?, ?, ?)",
-                 urlModel.getTime(),urlModel.getCounter(),urlModel.getLonUrl(),urlModel.getShorUrl());
+        jdbcTemplate.update("INSERT INTO URL(counter, longurl, shorturl) VALUES( ?, ?, ?)",urlModel.getCounter(),urlModel.getLonUrl(),urlModel.getShorUrl());
     }
 
     public void updateCounter(UrlModel urlModel){
@@ -38,9 +44,6 @@ public class UrlDAO {
     }
 
 
-    public void delete(int id){
-        jdbcTemplate.update("DELETE FROM URL WHERE id=?", id);
-    }
 
 
 }

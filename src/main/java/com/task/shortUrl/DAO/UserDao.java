@@ -15,7 +15,7 @@ public class UserDao {
 
     public void save(UserEntity userEntity){
         jdbcTemplate.update("INSERT INTO USERS(login, password, role) VALUES(?,?,?)", userEntity.getLogin(),
-                userEntity.getPassword(),userEntity.getPassword());
+                userEntity.getPassword(),userEntity.getRole());
     }
 
     public UserEntity findByLogin(String login){
