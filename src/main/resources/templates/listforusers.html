@@ -25,7 +25,7 @@
   </tr>
   <tr th:each = "url :${urlmodels}">
     <td class="first"  th:text="${url.getLonUrl()}"></td>
-    <td th:text="${url.getShorUrl()}">ghjghcj</td>
+    <td th:text="'https://url4566.herokuapp.com/' + ${url.getShorUrl()}">ghjghcj</td>
     <td class="visits"  th:text="${url.getCounter()}">ghjgjhgjhgj</td>
   </tr>
 </table>
